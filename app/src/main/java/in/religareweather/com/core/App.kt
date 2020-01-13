@@ -2,6 +2,7 @@ package `in`.religareweather.com.core
 
 import `in`.religareweather.com.di.component.DaggerCoreComponent
 import android.content.Context
+import androidx.multidex.MultiDex
 
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication

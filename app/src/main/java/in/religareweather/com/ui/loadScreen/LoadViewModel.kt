@@ -1,4 +1,4 @@
-package mvvm.sample.foods.ui
+package `in`.religareweather.com.ui.loadScreen
 
 
 import `in`.religareweather.com.data.repository.AppRepository
