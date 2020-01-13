@@ -1,5 +1,6 @@
 package `in`.religareweather.com.core
 
+import `in`.religareweather.com.di.component.DaggerCoreComponent
 import android.content.Context
 
 import dagger.android.AndroidInjector
