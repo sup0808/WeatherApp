@@ -8,6 +8,14 @@
             type="in.religareweather.com.ui.failScreen.FailViewModel">
         </variable>
     </data>
+
+   <!-- <data>
+        <variable
+            name="viewModel"
+            type="in.religareweather.com.ui.loadScreen.LoadViewModel">
+        </variable>
+    </data>
+-->
     <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/failbg_color"
@@ -27,11 +35,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/retry_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/retry"
             android:textColor="#fff"
+
             android:background="@color/buttonbg_color"
             android:layout_marginTop="@dimen/margin_rtery_height"
             app:layout_constraintEnd_toEndOf="parent"

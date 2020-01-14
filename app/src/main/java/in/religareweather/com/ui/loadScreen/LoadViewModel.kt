@@ -23,7 +23,6 @@ class LoadViewModel @Inject constructor(appRepositoryobj: AppRepository) : BaseV
     }
 
     fun getCurrentWeather() : LiveData<CurrentWeatherResult>?{
-
         LoadCurrentWeather()
         return currentWeather;
     }
@@ -41,6 +40,8 @@ class LoadViewModel @Inject constructor(appRepositoryobj: AppRepository) : BaseV
 
         ).also { compositeDisposable!!.add(it) }
     }
+
+
 
 
 

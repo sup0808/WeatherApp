@@ -37,6 +37,7 @@
             android:id="@+id/current_temp_txt"
             style="@style/current_temp"
             android:text="@string/Fahrenheit"
+            android:lineHeight="112sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +45,9 @@
 
 
         <in.religareweather.com.util.CustomTextRegularBlack
+            android:id="@+id/max_min_temp_txt"
             style="@style/max_min_temp"
-            android:text="@string/Celsius"
+
             android:layout_marginTop="40dp"
             app:layout_constraintBottom_toBottomOf="@+id/current_temp_txt"
             app:layout_constraintStart_toEndOf="@+id/current_temp_txt"
@@ -55,6 +57,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <in.religareweather.com.util.CustomTextRegular
+        android:id="@+id/current_temp_location_txt"
         style="@style/current_temp_location"
        android:layout_marginBottom="@dimen/margin_bottom_temp"
         android:text="Banglore"
