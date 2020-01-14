@@ -2,6 +2,7 @@ package `in`.religareweather.com.di.builder
 
 
 import `in`.religareweather.com.di.qualifier.ViewModelKey
+import `in`.religareweather.com.ui.weatherScreen.WeatherViewModel
 import `in`.religareweather.com.ui.failScreen.FailViewModel
 
 
@@ -24,6 +25,11 @@ abstract class AppViewModelBuilder {
     @IntoMap
     @ViewModelKey(FailViewModel::class)
     abstract fun bindFailreViewModel(failreViewModel: FailViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(WeatherViewModel::class)
+    abstract fun bindWeatherViewModel(weatherViewModel: WeatherViewModel): ViewModel
 
 
 

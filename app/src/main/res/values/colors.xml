@@ -5,7 +5,10 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="bg_color">#F5F6F7</color>
+    <color name="buttonbg_color">#4A4A4A</color>
+    <color name="failbg_color">#E85959</color>
 
+    <color name="white">#fff</color>
 
 
 </resources>

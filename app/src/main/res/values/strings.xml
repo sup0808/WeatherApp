@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ReligareWeather</string>
+    <string name="wrong">Something went wrong at our end!</string>
+    <string name="retry">RETRY</string>
+    <string name="button">Button</string>
+    <string name="Celsius"> 20\u2103</string>
+    <string name="Fahrenheit">25\u00B0</string>
 </resources>

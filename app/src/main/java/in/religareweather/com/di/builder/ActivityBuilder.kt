@@ -2,6 +2,7 @@ package `in`.religareweather.com.di.builder
 
 
 import `in`.religareweather.com.ui.LoadScreen
+import `in`.religareweather.com.ui.weatherScreen.WeatherActivity
 import `in`.religareweather.com.ui.failScreen.FailActivity
 
 
@@ -20,6 +21,9 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
     abstract fun bindFailureActivity(): FailActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindWaetherActivity(): WeatherActivity
 
 
     @ContributesAndroidInjector(modules = [LoadScreenFragmentProviders::class])
