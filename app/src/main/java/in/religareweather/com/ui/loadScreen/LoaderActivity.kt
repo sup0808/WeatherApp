@@ -4,11 +4,17 @@ import `in`.indiaonline.latest.ui.Base.BaseActivity
 import `in`.religareweather.com.BR
 import `in`.religareweather.com.R
 import `in`.religareweather.com.databinding.LoadLayoutBinding
+import `in`.religareweather.com.ui.weatherScreen.WeatherActivity
+import `in`.religareweather.com.ui.failScreen.FailActivity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.view.animation.RotateAnimation
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import dagger.android.AndroidInjection
@@ -49,10 +55,28 @@ class LoaderActivity :BaseActivity<LoadLayoutBinding,LoadViewModel>(){
         AndroidInjection.inject(this)
         supportActionBar!!.hide()
 
+        context =this
+
         loadLayoutBinding = getViewDataBinding()
 
-
         startLoading()
+        val handler = Handler()
+        handler.postDelayed({
+            loadViewModel.getCurrentWeather()
+        }, 2000)
+
+        with(loadViewModel){
+            currentWeather.observe(this@LoaderActivity, Observer {
+
+                val intent = Intent(context, WeatherActivity::class.java)
+                startActivity(intent)
+
+            })
+            error.observe(this@LoaderActivity, Observer {
+                val intent = Intent(context,FailActivity::class.java)
+                 startActivity(intent)
+            })
+        }
 
     }
 
