@@ -1,5 +1,6 @@
 package `in`.religareweather.com.data.repository
 
+import `in`.religareweather.com.core.Config
 import `in`.religareweather.com.data.model.CurrentWeatherResult
 import `in`.religareweather.com.data.model.ForecastWheatherResult
 import `in`.religareweather.com.data.network.ApiDisposable
@@ -26,7 +27,7 @@ class AppRepoImp(
         treminate: () -> Unit
     ): Disposable {
 
-        return apiService.getCurrentWeahter(country)
+        return apiService.getCurrentWeahter(country,Config.AUTH_KEY)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnTerminate(treminate)
@@ -47,7 +48,7 @@ class AppRepoImp(
         treminate: () -> Unit
     ): Disposable {
 
-        return apiService.getForecastWeahter(country)
+        return apiService.getForecastWeahter(country,Config.AUTH_KEY)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnTerminate(treminate)
