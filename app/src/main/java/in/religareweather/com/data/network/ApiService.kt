@@ -13,7 +13,7 @@ interface ApiService {
     @GET("weather?appid="+Config.AUTH_KEY)
     fun getCurrentWeahter(@Query("q") Country : String): Observable<CurrentWeatherResult>
 
-    @GET("weather?appid="+Config.AUTH_KEY)
+    @GET("forecast?appid="+Config.AUTH_KEY)
     fun getForecastWeahter(@Query("q") Country : String): Observable<ForecastWheatherResult>
 
 }

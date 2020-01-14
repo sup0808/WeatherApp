@@ -53,12 +53,12 @@ class LoaderFragment : DaggerFragment(){
         with(loadViewModel) {
             currentWeather.observe(this@LoaderFragment, Observer {
 
-                activity!!.supportFragmentManager.beginTransaction().replace(R.id.container,WeatherFragment()).addToBackStack(null).commit()
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.container,WeatherFragment(),"Weather").commit()
 
 
             })
             error.observe(this@LoaderFragment, Observer {
-                activity!!.supportFragmentManager.beginTransaction().replace(R.id.container,FailFragment()).addToBackStack(null).commit()
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.container,FailFragment(),"Fail").commit()
 
 
             })

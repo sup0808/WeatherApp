@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="in.religareweather.com.ui.weatherScreen.WeatherViewModel">
+            type="in.religareweather.com.ui.loadScreen.LoadViewModel">
         </variable>
     </data>
 

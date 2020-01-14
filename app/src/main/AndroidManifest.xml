@@ -12,14 +12,7 @@
         android:supportsRtl="true"
         android:name=".core.App"
         android:theme="@style/AppTheme">
-       <!-- <activity android:name=".ui.loadScreen.LoaderActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
--->
         <activity android:name=".ui.LoadScreen"
             android:launchMode="singleTask">
             <intent-filter>
@@ -30,13 +23,6 @@
         </activity>
 
 
-        <activity
-            android:name=".ui.failScreen.FailActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".ui.weatherScreen.WeatherActivity"
-            android:screenOrientation="portrait"/>
 
     </application>
 

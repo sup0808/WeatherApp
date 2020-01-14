@@ -5,4 +5,5 @@
     <string name="button">Button</string>
     <string name="Celsius"> \u2103</string>
     <string name="Fahrenheit">25\u00B0</string>
+    <string name="empty_list">oops, List is empty.</string>
 </resources>

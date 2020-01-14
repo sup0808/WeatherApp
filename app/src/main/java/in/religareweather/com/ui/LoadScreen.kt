@@ -6,29 +6,23 @@ import `in`.religareweather.com.BR
 import `in`.religareweather.com.R
 import `in`.religareweather.com.databinding.LoadHomeBinding
 import `in`.religareweather.com.databinding.LoadLayoutBinding
-import `in`.religareweather.com.ui.failScreen.FailActivity
 import `in`.religareweather.com.ui.failScreen.FailFragment
 import `in`.religareweather.com.ui.loadScreen.LoadViewModel
-import `in`.religareweather.com.ui.loadScreen.LoaderActivity
 import `in`.religareweather.com.ui.loadScreen.LoaderFragment
-import `in`.religareweather.com.ui.weatherScreen.WeatherActivity
 import `in`.religareweather.com.ui.weatherScreen.WeatherFragment
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
+import android.util.Log
 
-import android.widget.Toolbar
-import androidx.lifecycle.Observer
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
 
 class LoadScreen : BaseActivity<LoadHomeBinding,LoadViewModel>() {
 
-    private val TAG = LoaderActivity::class.java.simpleName
+    private val TAG = LoadScreen::class.java.simpleName
 
 
     @Inject
@@ -60,8 +54,20 @@ class LoadScreen : BaseActivity<LoadHomeBinding,LoadViewModel>() {
 
         supportFragmentManager.beginTransaction().replace(R.id.container,LoaderFragment()).commit()
 
+    }
 
+    override fun onBackPressed() {
 
+        val f: Fragment? = supportFragmentManager.findFragmentByTag("Weather")
+        val f2: Fragment? = supportFragmentManager.findFragmentByTag("Fail")
+        if (f is WeatherFragment) { //the fragment on which you want to handle your back press
+            Log.i("BACK PRESSED", "BACK PRESSED")
+        }
+       else  if (f2 is FailFragment) { //the fragment on which you want to handle your back press
+            Log.i("BACK PRESSED", "BACK PRESSED")
+        }else {
+            super.onBackPressed()
+        }
     }
 
 

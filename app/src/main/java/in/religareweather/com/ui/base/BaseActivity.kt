@@ -18,7 +18,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerAppCompatActivity
-import mvvm.sample.foods.ui.base.BaseViewModel
 
 abstract class BaseActivity<T : ViewDataBinding, V: BaseViewModel> : DaggerAppCompatActivity(){
 

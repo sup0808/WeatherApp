@@ -1,4 +1,5 @@
-package mvvm.sample.foods.ui.base
+package `in`.indiaonline.latest.ui.Base
+
 
 
 import androidx.lifecycle.LifecycleObserver
