@@ -1,7 +1,8 @@
 package `in`.indiaonline.latest.ui.Base
 
 
-import `in`.indiaonline.latest.Util.NetworkUtils
+
+import `in`.religareweather.com.util.NetworkUtils
 import android.Manifest.permission
 import android.app.ProgressDialog
 import android.content.Context

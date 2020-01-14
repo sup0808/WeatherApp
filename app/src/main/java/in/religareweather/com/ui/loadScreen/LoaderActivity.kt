@@ -50,9 +50,13 @@ class LoaderActivity :BaseActivity<LoadLayoutBinding,LoadViewModel>(){
         supportActionBar!!.hide()
 
         loadLayoutBinding = getViewDataBinding()
+
+
         startLoading()
 
     }
+
+
 
     fun startLoading(){
 

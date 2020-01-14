@@ -1,4 +1,4 @@
-package `in`.indiaonline.latest.Util
+package `in`.religareweather.com.util
 
 import android.content.Context
 import android.net.ConnectivityManager
